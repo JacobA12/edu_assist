@@ -1,11 +1,14 @@
-import React from 'react'
+import ButtonSvg from "../assets/svg/ButtonSvg";
 
-const Button = () => {
-  return (
-    <div>
-      Button
-    </div>
-  )
-}
+const Button = ({ className, href, onClick, children, px, white }) => {
+  const classes = ''
+  const renderButton = () => (
+    <button className={classes}>
+      <span>{children}</span>
+      {ButtonSvg(white)}
+    </button>
+  );
+  return renderButton();
+};
 
-export default Button
+export default Button;
